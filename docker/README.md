@@ -6,7 +6,7 @@
 gradle composeUp -Penvironment="local"
 ```
 
-以上で http://localhost:8080/se00g0 にアクセスできれば完了．
+以上で http://localhost:8080/se00g0 にアクセスできればComplete．
 
 ## 本番環境へのデプロイ方法
 
@@ -101,4 +101,4 @@ location /se00g0 {
 sudo systemctl restart nginx
 ```
 
-以上で https://onyx.u-gakugei.ac.jp/se00g0 にアクセスできれば完了です．
+以上で https://onyx.u-gakugei.ac.jp/se00g0 にアクセスできればCompleteです．

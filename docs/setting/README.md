@@ -46,6 +46,6 @@ GitHub のリリース機能を使用し，デプロイを行う．手順は以�
 1. デプロイを行いたい状態のものを master ブランチに反映させ，image の push を行い正常に終了させる（CD で自動化されているので master に反映させるだけ）．
 2. リリースを行う.新しくリリースを作成する際に，**Targrt を master にし，タグに必ず v を入れて**リリースをする(下図は v1.01 と入力).
 3. 概要にデプロイしたい環境の概要を記述しておく．
-4. publish release を選択することで，リリースが完了し GitHub Actions の CD が動くので完了したかを確かめる．
+4. publish release を選択することで，リリースがCompleteし GitHub Actions の CD が動くのでCompleteしたかを確かめる．
 
 <img width="1395" alt="スクリーンショット 2021-01-02 15 25 52" src="https://user-images.githubusercontent.com/38200453/103452063-d26a6100-4d0e-11eb-942f-65a718640e42.png">

@@ -17,7 +17,7 @@ plugins {
     id 'eclipse'
     id 'war'
     id "com.avast.gradle.docker-compose" version "0.13.4"
-    id 'com.palantir.docker' version '0.25.0'
+    id 'com.palantir.docker' version '0.36.0'
 }
 apply plugin: 'com.bmuschko.tomcat'
 
@@ -27,11 +27,10 @@ ext {
     mySQLVersion = '8.0.15'
 }
 
-sourceSets {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -61,11 +60,11 @@ tomcat() {
     httpProtocol = 'org.apache.coyote.http11.Http11Nio2Protocol'
     ajpProtocol = 'org.apache.coyote.ajp.AjpNio2Protocol'
     // プロジェクト名(コンテキストパス)
-    // http://localhost:8080/se00g0 の場合
+    // http://localhost:8080/acs の場合
     if( project.hasProperty('environment') ){
         contextPath = "${project.environment}"
     } else {
-        contextPath = 'se00g0'
+        contextPath = 'acs'
     }
 }
 
