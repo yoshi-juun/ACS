@@ -10,6 +10,7 @@
     <style>
         .in-progress { background-color: #d4edda; } /* 薄緑 */
         .completed { background-color: #e2e3e5; }   /* 薄めのグレー */
+        .concierge-info { border: 1px solid #ddd; border-radius: 0.25rem; padding: 15px; margin-bottom: 15px; }
     </style>
 </head>
 <body class="bg-light">
@@ -17,10 +18,22 @@
         <h2 class="text-center mb-4">タスク一覧</h2>
 
         <!-- コンシェルジュの情報を表示 -->
-        <div class="alert alert-info">
-            <p>現在稼働中のコンシェルジュ: <strong>田中 太郎</strong></p>
-            <p>対応中のタスク: 書類作成</p>
-            <p>所要時間: 45分</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="alert alert-info concierge-info">
+                    <p>現在稼働中: <strong>コンシェルジュB</strong></p>
+                    <p>対応中のタスク: タスクF</p>
+                    <p>残り: 15分</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-info concierge-info">
+                    <p>現在稼働中: <strong>コンシェルジュD</strong></p>
+                    <p>対応中のタスク: タスクI</p>
+                    <p>残り: 30分</p>
+                </div>
+            </div>
+            <!-- 必要に応じてさらにコンシェルジュ情報を追加 -->
         </div>
 
         <!-- No・InProgressのタスクを表示 -->
@@ -70,6 +83,11 @@
                 %>
             </tbody>
         </table>
+
+        <!-- 新しいタスクを追加するボタン -->
+        <div class="text-right mb-4">
+            <a href="AddTask" class="btn btn-primary">新しいタスクを追加</a>
+        </div>
 
         <!-- Completeタスクを表示 -->
         <h4 class="text-secondary mt-4 mb-3">Completeタスク</h4>
