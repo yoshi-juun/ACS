@@ -33,7 +33,7 @@ public class Detail extends HttpServlet {
 
         if (selectedTask != null) {
             // Set the task in the request scope and forward to detail.jsp
-            request.setAttribute("task", selectedTask);
+            session.setAttribute("task", selectedTask);
             request.getRequestDispatcher("/detail.jsp").forward(request, response);
         } else {
             response.sendRedirect("GetListServlet"); // Redirect if task not found

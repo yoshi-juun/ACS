@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="model.Task" %>
 <%
-    Task task = (Task) request.getAttribute("task");
+    Task task = (Task) session.getAttribute("task");
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -77,6 +77,19 @@
                 <div class="text-center">
                     <a href="GetListServlet" class="btn btn-secondary">リスト一覧に戻る</a>
                 </div>
+
+                <%-- Edit and Delete buttons --%>
+                <div class="text-center action-buttons">
+                    <form action="EditTask" method="get" style="display:inline;">
+                        <input type="hidden" name="taskId" value="<%= task.getTaskId() %>">
+                        <button type="submit" class="btn btn-warning">編集</button>
+                    </form>
+                    <form action="DeleteTask" method="post" style="display:inline;">
+                        <input type="hidden" name="taskId" value="<%= task.getTaskId() %>">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('本当に削除しますか？');">削除</button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>

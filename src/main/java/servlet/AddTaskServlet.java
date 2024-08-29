@@ -22,6 +22,8 @@ public class AddTaskServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=UTF-8");
         // リクエストからフォームの値を取得
         String customerIdStr = request.getParameter("customerId");
         String taskName = request.getParameter("taskName");
@@ -83,7 +85,7 @@ public class AddTaskServlet extends HttpServlet {
         
         taskList.add(newTask);
         // 優先度と締切でソート
-            Collections.sort(taskList, Comparator.comparing(Task::getPriority).thenComparing(Task::getDeadline));
+        Collections.sort(taskList, Comparator.comparing(Task::getPriority).thenComparing(Task::getDeadline));
 
 
         // 更新されたタスクリストをセッションに保存

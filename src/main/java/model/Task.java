@@ -35,6 +35,54 @@ public class Task {
 
     // ゲッターとセッター
     public int getTaskId() { return taskId; }
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public void setCompletionDate(Date completionDate) {
+        this.completionDate = completionDate;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
+    }
+
+    public int getConciergeId() {
+        return conciergeId;
+    }
+
+    public void setConciergeId(int conciergeId) {
+        this.conciergeId = conciergeId;
+    }
+
+    public void setRequiredTime(int requiredTime) {
+        this.requiredTime = requiredTime;
+    }
+
     public int getCustomerId(){return customerId;}
     public String getDetails(){return details;}
     public String getCustomerName() { return customerName; }
