@@ -11,7 +11,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-12">
-                <p>ログイン中のユーザー: <strong><%= request.getParameter("userId") %></strong></p>
+                <p>ログイン中のユーザー: <strong><%= session.getAttribute("userId") %></strong></p>
             </div>
         </div>
         <div class="row mt-4">

@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
@@ -15,7 +16,8 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String userId = request.getParameter("userId");
-        request.setAttribute("userId", userId);
+        HttpSession session = request.getSession();
+        session.setAttribute("userId", userId);
         request.getRequestDispatcher("/main.jsp").forward(request,response);
     }
     

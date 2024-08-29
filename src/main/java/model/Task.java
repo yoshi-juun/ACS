@@ -35,6 +35,8 @@ public class Task {
 
     // ゲッターとセッター
     public int getTaskId() { return taskId; }
+    public int getCustomerId(){return customerId;}
+    public String getDetails(){return details;}
     public String getCustomerName() { return customerName; }
     public String getTaskName() { return taskName; }
     public String getPriority() { return priority; }
@@ -42,6 +44,7 @@ public class Task {
     public Date getOrderDate() { return orderDate; }
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+    public int getRequiredTime(){return requiredTime;}
     
     // Complete日時を取得
     public Date getCompletionDate() { return completionDate; } // 追加したゲッターメソッド

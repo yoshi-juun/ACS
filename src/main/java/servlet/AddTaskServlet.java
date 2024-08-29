@@ -28,12 +28,11 @@ public class AddTaskServlet extends HttpServlet {
         String details = request.getParameter("details");
         String priority = request.getParameter("priority");
         String deadlineStr = request.getParameter("deadline");
-        String conciergeIdStr = request.getParameter("conciergeId");
         String durationStr = request.getParameter("duration");
 
         // 必要な値を変換
         int customerId = Integer.parseInt(customerIdStr);
-        int conciergeId = Integer.parseInt(conciergeIdStr);
+
         int requiredTime = Integer.parseInt(durationStr);
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
@@ -72,7 +71,7 @@ public class AddTaskServlet extends HttpServlet {
         int taskId = 0; // ここでは仮のIDを設定。実際には自動生成や管理方法が必要
 
         // 新しいタスクオブジェクトを作成
-        Task newTask = new Task(taskId, customerId, customerName, new Date(), taskName, details, priority, deadline, "No", conciergeId, requiredTime, null);
+        Task newTask = new Task(taskId, customerId, customerName, new Date(), taskName, details, priority, deadline, "No", 0, requiredTime, null);
 
         // セッションからタスクリストを取得し、新しいタスクを追加
         HttpSession session = request.getSession();

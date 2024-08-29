@@ -29,7 +29,20 @@
             </div>
             <div class="form-group">
                 <label for="taskName">タスク名:</label>
-                <input type="text" class="form-control" id="taskName" name="taskName" required>
+                <select class="form-control" name="taskName" id="taskName" required>
+                    <option value="チェックイン" >チェックイン</option>
+                    <option value="チェックアウト" >チェックアウト</option>
+                    <option value="備品貸し出し" >備品貸し出し</option>
+                    <option value="観光プラン提案" >観光プラン提案</option>
+                    <option value="観光プラン手配" >観光プラン手配</option>
+                    <option value="レストラン・カフェ予約" >レストラン・カフェ予約</option>
+                    <option value="タクシー・レンタカー手配" >タクシー・レンタカー手配</option>
+                    <option value="クリーニング取次" >クリーニング取次</option>
+                    <option value="整体・マッサージ手配" >整体・マッサージ手配</option>
+                    <option value="宅配便手配" >宅配便手配</option>
+                    <option value="急病人付き添い" >急病人付き添い</option>
+                    <option value="カスタマイズ">カスタマイズ</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="details">詳細:</label>
@@ -47,16 +60,7 @@
                 <label for="deadline">期限:</label>
                 <input type="datetime-local" class="form-control" id="deadline" name="deadline" required>
             </div>
-            <div class="form-group">
-                <label for="conciergeId">対応コンシェルジュID:</label>
-                <select class="form-control" name="conciergeId" id="conciergeId" required>
-                    <option value="201" >コンシェルジュA</option>
-                    <option value="202" >コンシェルジュB</option>
-                    <option value="203" >コンシェルジュC</option>
-                    <option value="204" >コンシェルジュD</option>
-                    <option value="205" >コンシェルジュE</option>
-                </select>
-            </div>
+            
             <div class="form-group">
                 <label for="duration">所要時間:</label>
                 <input type="number" class="form-control" id="duration" name="duration" required>
